@@ -47,7 +47,7 @@ plot(df_fil20$Date, df_fil20$Volume,
      xlab = "Dias del año",
      ylab = "Volumen de viajes",
      main = "Viajes de Ubers en 2020",
-     type = "l", col = "blue",
+     type = "l", col = "darkblue",
      family = "serif")
 
 # 2021
@@ -55,7 +55,7 @@ plot(df_fil21$Date, df_fil21$Volume,
      xlab = "Dias del año",
      ylab = "Volumen de viajes",
      main = "Viajes de Ubers en 2021",
-     type = "l", col = "green",
+     type = "l", col = "darkgreen",
      family = "serif")
 # 2022
 
