@@ -8,9 +8,6 @@ library(lubridate)
 library(ggplot2)
 library(ggthemes)
 
-# current version
-packageVersion("hrbrthemes")
-## [1] '0.9.2'
 df <- read_csv("uber_stock_data.csv")
 
 str(df)
@@ -38,7 +35,7 @@ df_fil22 <- df %>%
   filter(year(Date) == 2022)
 
 # 2019
-plot(df_fil19$Date, df_fil19$Volume, data = df_fil19, 
+plot(df_fil19$Date, df_fil19$Volume, 
      xlab = "Dias del año",
      ylab = "Volumen de viajes",
      main = "Viajes de Ubers en 2019",
@@ -46,7 +43,7 @@ plot(df_fil19$Date, df_fil19$Volume, data = df_fil19,
      family = "serif")
 
 # 2020
-plot(df_fil20$Date, df_fil20$Volume, data = df_fil20, 
+plot(df_fil20$Date, df_fil20$Volume, 
      xlab = "Dias del año",
      ylab = "Volumen de viajes",
      main = "Viajes de Ubers en 2020",
@@ -54,7 +51,7 @@ plot(df_fil20$Date, df_fil20$Volume, data = df_fil20,
      family = "serif")
 
 # 2021
-plot(df_fil21$Date, df_fil21$Volume, data = df_fil21, 
+plot(df_fil21$Date, df_fil21$Volume, 
      xlab = "Dias del año",
      ylab = "Volumen de viajes",
      main = "Viajes de Ubers en 2021",
@@ -62,7 +59,7 @@ plot(df_fil21$Date, df_fil21$Volume, data = df_fil21,
      family = "serif")
 # 2022
 
-plot(df_fil22$Date, df_fil22$Volume, data = df_fil22, 
+plot(df_fil22$Date, df_fil22$Volume,
      xlab = "Dias del año",
      ylab = "Volumen de viajes",
      main = "Viajes de Ubers en 2022",
@@ -76,5 +73,5 @@ ggplot(df_fil19, aes(df_fil19$Date, df_fil19$Volume)) +
   geom_point(color = "darkred", size = 1)+
   theme_solarized(base_family = "serif") +
   labs(x = "Días del año",y = "Número de viajes",
-  title = "Viajes de Ubers en 2021")
+  title = "Viajes de Ubers en 2019")
 
